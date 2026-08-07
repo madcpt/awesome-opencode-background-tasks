@@ -1,0 +1,64 @@
+{
+  "name": "opencode-background-tasks",
+  "version": "0.1.0",
+  "description": "Detached shell jobs with task management and notifications for OpenCode",
+  "type": "module",
+  "main": "./dist/server.js",
+  "types": "./dist/server.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.js"
+    },
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.js"
+    },
+    "./tui": {
+      "types": "./dist/tui.d.ts",
+      "import": "./dist/tui.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "tsx --test test/*.test.ts",
+    "check": "npm run build && npm test"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "background-tasks",
+    "shell"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@opencode-ai/plugin": "^1.18.1"
+  },
+  "peerDependencies": {
+    "@opentui/core": ">=0.4.5",
+    "@opentui/keymap": ">=0.4.5",
+    "@opentui/solid": ">=0.4.5",
+    "solid-js": ">=1.9.10 <2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-typescript": "^7.27.1",
+    "@opencode-ai/plugin": "^1.0.0",
+    "@opentui/core": "^0.4.5",
+    "@opentui/keymap": "^0.4.5",
+    "@opentui/solid": "^0.4.5",
+    "@types/node": "^24.0.0",
+    "babel-preset-solid": "^1.9.12",
+    "solid-js": "^1.9.12",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
