@@ -1,6 +1,6 @@
 {
   "name": "opencode-shell-tasks",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Detached shell jobs with task management and notifications for OpenCode",
   "repository": {
     "type": "git",
