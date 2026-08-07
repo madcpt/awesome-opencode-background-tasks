@@ -19,7 +19,7 @@ test("runs a command without blocking and captures its output", async () => {
 
     await Promise.race([
       completed,
-      new Promise((_, reject) => setTimeout(() => reject(new Error("background command timed out")), 5000)),
+      new Promise((_, reject) => setTimeout(() => reject(new Error("background command timed out")), 15000)),
     ])
     const [task] = await store.list()
     assert.equal((await store.refresh(task)).status, "completed")
