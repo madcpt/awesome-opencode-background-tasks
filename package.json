@@ -2,6 +2,14 @@
   "name": "opencode-background-tasks",
   "version": "0.1.0",
   "description": "Detached shell jobs with task management and notifications for OpenCode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/madcpt/awesome-opencode-background-tasks.git"
+  },
+  "homepage": "https://github.com/madcpt/awesome-opencode-background-tasks#readme",
+  "bugs": {
+    "url": "https://github.com/madcpt/awesome-opencode-background-tasks/issues"
+  },
   "type": "module",
   "main": "./dist/server.js",
   "types": "./dist/server.d.ts",
@@ -27,7 +35,8 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "test": "tsx --test test/*.test.ts",
-    "check": "npm run build && npm test"
+    "check": "npm run build && npm test",
+    "prepack": "npm run build"
   },
   "keywords": [
     "opencode",
@@ -60,5 +69,8 @@
   },
   "engines": {
     "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -13,6 +13,27 @@ An OpenCode plugin for Claude Code-style background shell jobs. It lets the Agen
 - A native `/tasks` TUI panel registered automatically by the plugin
 - Automatic Agent guidance to route long-running shell work to `background_bash`
 
+## Install From npm
+
+Add the published package to the server plugin list in `opencode.json`:
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": ["opencode-background-tasks"]
+}
+```
+
+Add the same package name to the native TUI plugin list in `~/.config/opencode/tui.json`:
+
+```json
+{
+  "plugin": ["opencode-background-tasks"]
+}
+```
+
+OpenCode installs npm plugins automatically into its cache. Quit and restart OpenCode after changing either configuration file.
+
 ## Install From This Checkout
 
 ```sh
