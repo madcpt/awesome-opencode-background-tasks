@@ -20,7 +20,7 @@ Add the published package to the server plugin list in `opencode.json`:
 ```json
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["opencode-background-tasks"]
+  "plugin": ["opencode-shell-tasks"]
 }
 ```
 
@@ -28,7 +28,7 @@ Add the same package name to the native TUI plugin list in `~/.config/opencode/t
 
 ```json
 {
-  "plugin": ["opencode-background-tasks"]
+  "plugin": ["opencode-shell-tasks"]
 }
 ```
 
@@ -56,7 +56,7 @@ Add the same directory to the native TUI list in `~/.config/opencode/tui.json`:
 
 ```json
 {
-  "plugin": ["file:///absolute/path/to/opencode-background-tasks"]
+  "plugin": ["file:///absolute/path/to/opencode-shell-tasks"]
 }
 ```
 

@@ -1,6 +1,6 @@
 import BackgroundTasksPlugin from "./plugin.js"
 
 export default {
-  id: "opencode-background-tasks",
+  id: "opencode-shell-tasks",
   server: BackgroundTasksPlugin,
 }

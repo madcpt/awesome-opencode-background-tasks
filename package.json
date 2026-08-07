@@ -1,14 +1,14 @@
 {
-  "name": "opencode-background-tasks",
+  "name": "opencode-shell-tasks",
   "version": "0.1.0",
   "description": "Detached shell jobs with task management and notifications for OpenCode",
   "repository": {
     "type": "git",
-    "url": "https://github.com/madcpt/awesome-opencode-background-tasks.git"
+    "url": "https://github.com/madcpt/opencode-shell-tasks.git"
   },
-  "homepage": "https://github.com/madcpt/awesome-opencode-background-tasks#readme",
+  "homepage": "https://github.com/madcpt/opencode-shell-tasks#readme",
   "bugs": {
-    "url": "https://github.com/madcpt/awesome-opencode-background-tasks/issues"
+    "url": "https://github.com/madcpt/opencode-shell-tasks/issues"
   },
   "type": "module",
   "main": "./dist/server.js",

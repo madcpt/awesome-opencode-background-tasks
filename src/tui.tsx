@@ -309,6 +309,6 @@ const tui: TuiPlugin = async (api) => {
 }
 
 export default {
-  id: "opencode-background-tasks",
+  id: "opencode-shell-tasks",
   tui,
 }
