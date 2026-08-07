@@ -49,8 +49,17 @@ export class TaskManager {
     await this.store.save(task)
     this.children.set(task.id, child)
 
-    child.once("exit", (code, signal) => void this.recordExit(task.id, code, signal))
+    let exitHandled = false
+    const handleExit = (code: number | null, signal: NodeJS.Signals | null) => {
+      if (exitHandled) return
+      exitHandled = true
+      void this.recordExit(task.id, code, signal)
+    }
+    child.once("exit", handleExit)
     child.once("error", (error) => void this.recordError(task.id, error))
+    if (child.exitCode !== null || child.signalCode !== null) {
+      handleExit(child.exitCode, child.signalCode)
+    }
     return task
   }
 
