@@ -182,8 +182,8 @@ function TaskPanel(props: { api: TuiPluginApi }) {
               <Show when={tasks().length > 1}>
                 <text fg={theme().textMuted}>Shell {selected() + 1} of {tasks().length} · j/k to switch</text>
               </Show>
-              <Show when={selectedTask()}>
-                {(task) => <TaskDetails api={props.api} store={store} task={task()} />}
+              <Show when={selectedTask()} keyed>
+                {(task) => <TaskDetails api={props.api} store={store} task={task} />}
               </Show>
             </Show>
           </Show>
